@@ -1,0 +1,63 @@
+<div>
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Matricula: </label>
+            <input type="number" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Aluno: </label>
+            <input type="text" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nota 01: </label>
+            <input type="number" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nota 02: </label>
+            <input type="number" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </div>
+    </form>
+</div>
+<div>
+    <p>Lista de Alunos<p>
+    <table class="table" >
+        <thead>
+            <tr>
+                <th scope="col">Matricula</th>
+                <th scope="col">Aluno</th>
+                <th scope="col">Nota1</th>
+                <th scope="col">Nota2</th>
+                <th scope="col">Total</th>
+                <th scope="col">Média</th>
+                <th scope="col">Resultado</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students">
+                <th scope="row">{{ student.registration }}</th>
+                <td>{{ student.student }}</td>
+                <td>{{ student.note01 }}</td>
+                <td>{{ student.note02 }}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button type="button" class="btn btn-success">
+                        Editar
+                    </button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger">
+                        Excluir
+                    </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
